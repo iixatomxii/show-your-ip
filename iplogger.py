@@ -18,14 +18,14 @@ def log_ip_every_hour(log_file="public_ip_history_log.txt"):
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         entry = f"{timestamp} -> {ip}"
         
-        # Write to file
+
         with open(log_file, "a") as f:
             f.write(entry + "\n")
         
-        # Print to console
+
         print(entry)
         
-        # Wait 1 hour (3600 seconds)
+
         time.sleep(3600)
 
 if __name__ == "__main__":
@@ -35,4 +35,5 @@ if __name__ == "__main__":
         print("\nStopped by user.")
     except Exception as e:
         print("Error:", e)
+
     input("\nPress Enter to exit...")
