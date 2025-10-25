@@ -18,13 +18,10 @@ def log_ip_every_hour(log_file="public_ip_history_log.txt"):
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         entry = f"{timestamp} -> {ip}"
         
-
         with open(log_file, "a") as f:
             f.write(entry + "\n")
-        
 
         print(entry)
-        
 
         time.sleep(3600)
 
@@ -37,3 +34,4 @@ if __name__ == "__main__":
         print("Error:", e)
 
     input("\nPress Enter to exit...")
+
